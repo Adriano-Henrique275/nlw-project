@@ -1,0 +1,33 @@
+POST http://localhost:3000/events
+Content-Type: application/json
+
+{
+  "title": "teste",
+  "details": "testando a api",
+  "maximumAttendees": 25
+}
+
+###
+
+POST http://localhost:3000/events/dbf45eca-04ca-40bd-a977-007abd576c81/attendees
+Content-Type: application/json
+
+{
+  "name": "Adriano Henrique",
+  "email": "dri@dri.com"
+}
+
+###
+
+GET http://localhost:3000/events/9e9bd979-9d10-4915-b339-3786b1634f33
+
+###
+
+GET http://localhost:3000/attendees/10121/badge
+###
+
+GET http://localhost:3000/attendees/10121/check-in
+
+###
+
+GET http://localhost:3000/events/81a3f6db-45bf-4a6f-b10c-bcaf8837ac43/attendees?query=diego
